@@ -1,6 +1,6 @@
-package org.mattkohl.owls.model
+package org.mattkohl.owls.instances
 
-import ModelImplicits._
+import ModelInstances._
 import cats.syntax.semigroup._
 import org.apache.jena.rdf.model.{ModelFactory, Resource, ResourceFactory => RF, Property}
 import org.junit.runner.RunWith
