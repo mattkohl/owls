@@ -4,7 +4,7 @@ import cats.Monoid
 import org.apache.jena.rdf.model.{Model, ModelFactory}
 
 trait ModelInstances {
-  implicit val monoid: Monoid[Model] = new ModelMonoid
+  implicit val modelMonoid: Monoid[Model] = new ModelMonoid
 }
 
 class ModelMonoid extends Monoid[Model] {

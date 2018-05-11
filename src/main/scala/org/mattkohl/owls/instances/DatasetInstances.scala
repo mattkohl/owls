@@ -5,7 +5,7 @@ import org.apache.jena.query.{Dataset, DatasetFactory}
 import org.apache.jena.sparql.util.compose.DatasetLib.union
 
 trait DatasetInstances {
-  implicit val monoid: Monoid[Dataset] = new DatasetMonoid
+  implicit val datasetMonoid: Monoid[Dataset] = new DatasetMonoid
 }
 
 class DatasetMonoid extends Monoid[Dataset] {
