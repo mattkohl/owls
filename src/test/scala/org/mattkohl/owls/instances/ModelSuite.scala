@@ -3,21 +3,12 @@ package org.mattkohl.owls.instances
 import model._
 import cats.syntax.semigroup._
 import cats.syntax.show._
-import org.apache.jena.datatypes.xsd.XSDDatatype
-import org.apache.jena.rdf.model.{Literal, Model, ModelFactory, Property, Resource, ResourceFactory => RF}
 import org.junit.runner.RunWith
-import org.scalatest.FunSuite
+import org.mattkohl.owls.ModelBase
 import org.scalatest.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
-class ModelSuite extends FunSuite {
-
-  val s: Resource = RF createResource "http://example.org/subject"
-  val p: Property = RF createProperty "http://example.org/predicate"
-  val three: Literal = RF createTypedLiteral ("3", XSDDatatype.XSDinteger)
-  val m1: Model = ModelFactory.createDefaultModel add (s, p, "object1")
-  val m2: Model = ModelFactory.createDefaultModel add (s, p, "object2")
-  val m3: Model = ModelFactory.createDefaultModel add (s, p, three)
+class ModelSuite extends ModelBase {
 
   test("semigroup combine") {
     val result = m1 |+| m2
