@@ -2,7 +2,11 @@ package org.mattkohl.owls.instances
 
 import cats.Show
 import org.apache.jena.rdf.model.Literal
+import org.apache.jena.datatypes.xsd.XSDDatatype
 
 trait LiteralInstances {
-  implicit val literalShow: Show[Literal] = Show.show[Literal]{literal => s"\"$literal\"^^<${literal.getDatatypeURI}>"}
+  implicit val literalShow: Show[Literal] = Show.show[Literal] {
+    case literal if literal.getDatatype == XSDDatatype.XSDstring => s""""${literal.getLexicalForm}""""
+    case literal => s""""${literal.getLexicalForm}"^^<${literal.getDatatypeURI}>"""
+  }
 }

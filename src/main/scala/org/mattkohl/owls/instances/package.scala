@@ -1,11 +1,11 @@
 package org.mattkohl.owls
 
 package object instances {
-  object model extends ModelInstances
   object dataset extends DatasetInstances
-  object statement extends StatementInstances
   object literal extends LiteralInstances
+  object model extends ModelInstances
   object property extends PropertyInstances
-  object resource extends ResourceInstances
   object rdfNode extends RDFNodeInstances
+  object resource extends ResourceInstances
+  object statement extends StatementInstances
 }
