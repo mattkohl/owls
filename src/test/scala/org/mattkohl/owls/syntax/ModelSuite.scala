@@ -19,9 +19,9 @@ class ModelSuite extends ModelBase {
     assert(result == Set((s, p, o1), (s, p, o2)))
   }
 
-  test ("sparql extension method") {
-    val query = "SELECT * { ?s ?p ?o }"
-    val result = m1.sparql(query)
+  test ("query extension method") {
+    val sparql = "SELECT * { ?s ?p ?o }"
+    val result = m1 query sparql
     assert(result.nonEmpty)
     assert(result.head.varNames.asScala.toSet == Set("s", "p", "o"))
   }

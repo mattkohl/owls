@@ -9,12 +9,12 @@ trait ModelSyntax {
 
   implicit class ModelOps(model: Model) {
     val triples: Set[(Resource, Property, RDFNode)] =
-      model.listStatements.asScala.toSet map {statement: Statement =>
+      model.listStatements.asScala.toSet map { statement: Statement =>
         (statement.getSubject, statement.getPredicate, statement.getObject)
       }
 
-    def sparql(query: String): List[QuerySolution] =
-      RSF.copyResults(QEF.create(query, model).execSelect).asScala.toList
+    def query(sparql: String): List[QuerySolution] =
+      RSF.copyResults(QEF.create(sparql, model).execSelect).asScala.toList
   }
 
 }
