@@ -10,5 +10,5 @@ trait DatasetInstances {
 
 class DatasetMonoid extends Monoid[Dataset] {
   def combine(d1: Dataset, d2: Dataset): Dataset = union(d1, d2)
-  def empty: Dataset = DatasetFactory.create()
+  def empty: Dataset = DatasetFactory.create
 }

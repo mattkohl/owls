@@ -11,15 +11,10 @@ import org.scalatest.junit.JUnitRunner
 class ResourceSuite extends FunSuite {
 
   val uri = "http://example.org/subject"
-  val s: Resource = RF.createResource(uri)
-  val as: Resource = RF.createResource(None.orNull)
+  val s: Resource = RF createResource uri
+  val as: Resource = RF createResource None.orNull
 
-  test("resource show") {
-    assert(s.show == s"<$uri>")
-  }
-
-  test("anon resource show") {
-    assert(s.show == s"_:$as")
-  }
+  test("resource show")(assert(s.show == s"<$uri>"))
+  test("anon resource show")(assert(as.show == s"_:$as"))
 
 }
