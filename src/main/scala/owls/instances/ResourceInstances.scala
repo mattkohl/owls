@@ -1,4 +1,4 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.Show
 import org.apache.jena.rdf.model.Resource

@@ -1,9 +1,9 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.syntax.show._
 import org.apache.jena.rdf.model.{Resource, ResourceFactory => RF}
 import org.junit.runner.RunWith
-import org.mattkohl.owls.instances.resource._
+import owls.instances.resource._
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 

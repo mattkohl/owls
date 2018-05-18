@@ -1,4 +1,4 @@
-package org.mattkohl.owls
+package owls
 
 import org.apache.jena.query.{Dataset, DatasetFactory}
 import org.apache.jena.rdf.model.{Resource, ResourceFactory => RF}

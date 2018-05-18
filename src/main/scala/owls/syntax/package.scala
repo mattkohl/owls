@@ -1,4 +1,4 @@
-package org.mattkohl.owls
+package owls
 
 package object syntax {
   object dataset extends DatasetSyntax

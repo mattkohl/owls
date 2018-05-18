@@ -1,11 +1,11 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.Show
 import cats.syntax.show._
-import org.mattkohl.owls.instances.resource._
-import org.mattkohl.owls.instances.property._
-import org.mattkohl.owls.instances.rdfNode._
-import org.apache.jena.rdf.model.{Resource, Property, RDFNode, Statement}
+import owls.instances.resource._
+import owls.instances.property._
+import owls.instances.rdfNode._
+import org.apache.jena.rdf.model.{Property, RDFNode, Resource, Statement}
 
 trait StatementInstances {
   implicit val statementShow: Show[Statement] = Show.show[Statement]{statement =>

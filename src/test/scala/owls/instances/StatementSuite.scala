@@ -1,10 +1,10 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.syntax.show._
 import org.apache.jena.datatypes.xsd.XSDDatatype
 import org.apache.jena.rdf.model.{Literal, Property, Resource, ResourceFactory => RF}
 import org.junit.runner.RunWith
-import org.mattkohl.owls.instances.statement._
+import owls.instances.statement._
 import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 

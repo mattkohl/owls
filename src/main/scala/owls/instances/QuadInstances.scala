@@ -1,13 +1,13 @@
-package org.mattkohl.owls.instances
+package owls
 
 import cats.Show
 import cats.syntax.show._
+import owls.instances.resource._
+import owls.instances.property._
+import owls.instances.rdfNode._
+import owls.syntax.node._
 import org.apache.jena.rdf.model.{Property, RDFNode, Resource}
 import org.apache.jena.sparql.core.Quad
-import org.mattkohl.owls.instances.property._
-import org.mattkohl.owls.instances.rdfNode._
-import org.mattkohl.owls.instances.resource._
-import org.mattkohl.owls.syntax.node._
 
 trait QuadInstances {
   implicit val quadShow: Show[Quad] = Show.show[Quad]{quad =>

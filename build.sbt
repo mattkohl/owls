@@ -1,7 +1,6 @@
 name := "owls"
-
+organization in ThisBuild := "com.mattkohl"
 version := "0.1"
-
 scalaVersion := "2.12.6"
 
 scalacOptions ++= Seq(
@@ -27,5 +26,7 @@ libraryDependencies += "org.scalactic" %% "scalactic" % scalatestVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % scalatestVersion % "test"
 libraryDependencies += "junit" % "junit" % "4.12" % Test
 
+homepage := Some(url("https://github.com/mattkohl/owls"))
+licenses +=("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
 addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6")

@@ -1,4 +1,4 @@
-package org.mattkohl.owls.syntax
+package owls.syntax
 
 import org.apache.jena.graph.Node
 import org.apache.jena.rdf.model.{Literal, Property, RDFNode, Resource, ResourceFactory => RF}

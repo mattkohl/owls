@@ -1,4 +1,4 @@
-package org.mattkohl.owls.syntax
+package owls.syntax
 
 import org.apache.jena.query.{QueryExecutionFactory => QEF, QuerySolution, ResultSetFactory => RSF}
 import org.apache.jena.rdf.model._

@@ -1,4 +1,4 @@
-package org.mattkohl.owls
+package owls
 
 import org.apache.jena.datatypes.xsd.XSDDatatype
 import org.apache.jena.rdf.model.{Literal, Model, ModelFactory, Property, Resource, ResourceFactory => RF}

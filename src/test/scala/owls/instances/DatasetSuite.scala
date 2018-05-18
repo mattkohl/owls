@@ -1,11 +1,11 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.syntax.semigroup._
 import cats.syntax.show._
 import org.junit.runner.RunWith
-import org.mattkohl.owls.DatasetBase
-import org.mattkohl.owls.instances.dataset._
+import owls.instances.dataset._
 import org.scalatest.junit.JUnitRunner
+import owls.DatasetBase
 
 @RunWith(classOf[JUnitRunner])
 class DatasetSuite extends DatasetBase {

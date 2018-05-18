@@ -1,4 +1,4 @@
-package org.mattkohl.owls
+package owls
 
 package object instances {
   object dataset extends DatasetInstances

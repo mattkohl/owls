@@ -1,11 +1,11 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import model._
 import cats.syntax.semigroup._
 import cats.syntax.show._
 import org.junit.runner.RunWith
-import org.mattkohl.owls.ModelBase
 import org.scalatest.junit.JUnitRunner
+import owls.ModelBase
 
 @RunWith(classOf[JUnitRunner])
 class ModelSuite extends ModelBase {

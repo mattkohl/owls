@@ -1,16 +1,18 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.{Monoid, Show}
 import cats.syntax.show._
-import org.mattkohl.owls.instances.quad._
+import owls.instances.quad._
 import org.apache.jena.query.{Dataset, DatasetFactory}
+import org.apache.jena.sparql.core.Quad
 import org.apache.jena.sparql.util.compose.DatasetLib.union
+
 import scala.collection.JavaConverters._
 
 trait DatasetInstances {
   implicit val datasetMonoid: Monoid[Dataset] = new DatasetMonoid
   implicit val datasetShow: Show[Dataset] = Show.show[Dataset]{dataset =>
-    dataset.asDatasetGraph().find().asScala.toList map {quad => quad.show} mkString " .\n"
+    dataset.asDatasetGraph().find().asScala.toList map {quad: Quad => quad.show} mkString " .\n"
   }
 }
 

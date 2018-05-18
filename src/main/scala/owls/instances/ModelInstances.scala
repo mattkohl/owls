@@ -1,8 +1,9 @@
-package org.mattkohl.owls.instances
+package owls.instances
 
 import cats.{Monoid, Show}
 import cats.syntax.show._
-import org.mattkohl.owls.instances.statement._
+import owls.instances.statement._
+
 import org.apache.jena.rdf.model.{Model, ModelFactory, Statement}
 
 import scala.collection.JavaConverters._
