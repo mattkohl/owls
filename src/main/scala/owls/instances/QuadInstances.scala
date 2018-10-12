@@ -1,12 +1,13 @@
-package owls
+package owls.instances
+
 
 import cats.Show
 import cats.syntax.show._
 import owls.instances.resource._
 import owls.instances.property._
 import owls.instances.rdfNode._
+import owls._
 import owls.syntax.node._
-import org.apache.jena.rdf.model.{Property, RDFNode, Resource}
 import org.apache.jena.sparql.core.Quad
 
 trait QuadInstances {

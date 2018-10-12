@@ -2,9 +2,10 @@ package owls.instances
 
 import cats.{Monoid, Show}
 import cats.syntax.show._
-import owls.instances.statement._
 
-import org.apache.jena.rdf.model.{Model, ModelFactory, Statement}
+import owls.instances.statement._
+import owls._
+import org.apache.jena.rdf.model.{ModelFactory => MF}
 
 import scala.collection.JavaConverters._
 
@@ -16,6 +17,6 @@ trait ModelInstances {
 }
 
 class ModelMonoid extends Monoid[Model] {
-  def combine(m1: Model, m2: Model): Model = ModelFactory.createDefaultModel.add(m1).add(m2)
-  def empty: Model = ModelFactory.createDefaultModel
+  def combine(m1: Model, m2: Model): Model = MF.createDefaultModel.add(m1).add(m2)
+  def empty: Model = MF.createDefaultModel
 }

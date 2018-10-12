@@ -1,7 +1,7 @@
 package owls.instances
 
 import cats.Show
-import org.apache.jena.rdf.model.Property
+import owls._
 
 trait PropertyInstances {
   implicit val propertyShow: Show[Property] = Show.show[Property](resource => s"<$resource>")

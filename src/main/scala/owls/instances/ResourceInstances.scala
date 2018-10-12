@@ -1,7 +1,7 @@
 package owls.instances
 
 import cats.Show
-import org.apache.jena.rdf.model.Resource
+import owls._
 
 trait ResourceInstances {
   implicit val resourceShow: Show[Resource] = Show.show[Resource]{

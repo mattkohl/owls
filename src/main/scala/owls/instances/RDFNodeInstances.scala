@@ -5,7 +5,7 @@ import cats.syntax.show._
 import owls.instances.resource._
 import owls.instances.literal._
 
-import org.apache.jena.rdf.model.RDFNode
+import owls._
 
 trait RDFNodeInstances {
   implicit val rdfNodeShow: Show[RDFNode] = Show.show[RDFNode]{

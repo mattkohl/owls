@@ -1,7 +1,7 @@
 package owls.syntax
 
-import org.apache.jena.graph.Node
-import org.apache.jena.rdf.model.{Literal, Property, RDFNode, Resource, ResourceFactory => RF}
+import owls._
+import org.apache.jena.rdf.model.{ResourceFactory => RF}
 
 trait NodeSyntax {
 

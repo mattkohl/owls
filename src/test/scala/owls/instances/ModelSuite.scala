@@ -4,11 +4,14 @@ import model._
 import cats.syntax.semigroup._
 import cats.syntax.show._
 import org.junit.runner.RunWith
+import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
 import owls.ModelBase
 
 @RunWith(classOf[JUnitRunner])
-class ModelSuite extends ModelBase {
+class ModelSuite extends FunSuite {
+
+  import ModelBase._
 
   test("semigroup combine") {
     val result = m1 |+| m2

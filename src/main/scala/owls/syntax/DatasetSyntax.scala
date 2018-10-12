@@ -1,8 +1,8 @@
 package owls.syntax
 
-import org.apache.jena.query.{QueryExecutionFactory => QEF, Dataset, QuerySolution, ResultSetFactory => RSF}
-import org.apache.jena.rdf.model._
-import org.apache.jena.sparql.core.Quad
+import owls._
+import org.apache.jena.query.{QueryExecutionFactory => QEF, ResultSetFactory => RSF}
+
 import owls.syntax.node._
 
 import scala.collection.JavaConverters._

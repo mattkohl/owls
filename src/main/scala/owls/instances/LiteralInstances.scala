@@ -1,8 +1,9 @@
 package owls.instances
 
 import cats.Show
+
+import owls._
 import org.apache.jena.datatypes.xsd.XSDDatatype
-import org.apache.jena.rdf.model.Literal
 
 trait LiteralInstances {
   implicit val literalShow: Show[Literal] = Show.show[Literal] {

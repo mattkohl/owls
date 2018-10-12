@@ -2,13 +2,16 @@ package owls.syntax
 
 import owls.syntax.dataset._
 import org.junit.runner.RunWith
+import org.scalatest.FunSuite
 import org.scalatest.junit.JUnitRunner
-import owls.DatasetBase
-
+import owls.{DatasetBase, ModelBase}
 import scala.collection.JavaConverters._
 
 @RunWith(classOf[JUnitRunner])
-class DatasetSuite extends DatasetBase {
+class DatasetSuite extends FunSuite {
+
+  import DatasetBase._
+  import ModelBase._
 
   test ("quads extension method") {
     val result = d1.quads
