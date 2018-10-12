@@ -22,6 +22,7 @@ libraryDependencies += "org.typelevel" %% "cats-core" % catsVersion
 libraryDependencies += "org.typelevel" %% "cats-laws" % catsVersion
 libraryDependencies += "org.apache.jena" % "jena-arq" % jenaVersion
 libraryDependencies += "org.apache.jena" % "jena-core" % jenaVersion
+libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.25"
 libraryDependencies += "org.scalactic" %% "scalactic" % scalatestVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % scalatestVersion % "test"
 libraryDependencies += "junit" % "junit" % "4.12" % Test
