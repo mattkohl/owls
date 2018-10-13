@@ -14,8 +14,8 @@ scalacOptions ++= Seq(
   "-Ypartial-unification" // allow the compiler to unify type constructors of different arities
 )
 
-lazy val catsVersion = "1.1.0"
-lazy val jenaVersion = "3.7.0"
+lazy val catsVersion = "1.4.0"
+lazy val jenaVersion = "3.9.0"
 lazy val scalatestVersion = "3.0.5"
 
 libraryDependencies += "org.typelevel" %% "cats-core" % catsVersion
@@ -30,4 +30,4 @@ libraryDependencies += "junit" % "junit" % "4.12" % Test
 homepage := Some(url("https://github.com/mattkohl/owls"))
 licenses +=("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html"))
 
-addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.6")
+addCompilerPlugin("org.spire-math" %% "kind-projector" % "0.9.8")
