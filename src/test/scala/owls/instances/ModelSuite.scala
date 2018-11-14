@@ -19,11 +19,12 @@ class ModelSuite extends FunSuite {
   }
 
   test("show pretty prints the statements") {
-    val expected =
-      """<http://example.org/subject> <http://example.org/predicate> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
-        |<http://example.org/subject> <http://example.org/predicate> "object1" .
-        |<http://example.org/subject> <http://example.org/predicate> "object2"""".stripMargin
+    val expected1 = """<http://example.org/subject> <http://example.org/predicate> "3"^^<http://www.w3.org/2001/XMLSchema#integer> ."""
+    val expected2 = """<http://example.org/subject> <http://example.org/predicate> "object1" ."""
+    val expected3 = """<http://example.org/subject> <http://example.org/predicate> "object2""""
 
-    assert((m1 |+| m2 |+| m3).show == expected)
+    assert((m1 |+| m2 |+| m3).show contains expected1)
+    assert((m1 |+| m2 |+| m3).show contains expected2)
+    assert((m1 |+| m2 |+| m3).show contains expected3)
   }
 }
