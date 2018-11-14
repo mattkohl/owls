@@ -11,8 +11,8 @@ import scala.collection.JavaConverters._
 
 trait ModelInstances {
   implicit val modelMonoid: Monoid[Model] = new ModelMonoid
-  implicit val modelShow: Show[Model] = Show.show[Model]{model =>
-    model.listStatements.asScala.toList map {statement: Statement => statement.show} mkString " .\n"
+  implicit val modelShow: Show[Model] = Show.show[Model]{ model =>
+    model.listStatements.asScala.toList map (_.show) mkString " .\n"
   }
 }
 

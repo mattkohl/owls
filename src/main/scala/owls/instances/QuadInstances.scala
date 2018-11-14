@@ -11,7 +11,7 @@ import owls.syntax.node._
 import org.apache.jena.sparql.core.Quad
 
 trait QuadInstances {
-  implicit val quadShow: Show[Quad] = Show.show[Quad]{quad =>
+  implicit val quadShow: Show[Quad] = Show.show[Quad]{ quad =>
     val g: Resource = quad.getGraph.asResource
     val s: Resource = quad.getSubject.asResource
     val p: Property = quad.getPredicate.asProperty
